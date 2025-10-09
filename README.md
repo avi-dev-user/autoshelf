@@ -1,5 +1,9 @@
 # AutoShelf 📂
 
+<p align="center">
+  <img src="logo.png" alt="AutoShelf Logo" width="200">
+</p>
+
 > Smart file organization for macOS. No AI. No setup. Just works.
 
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
