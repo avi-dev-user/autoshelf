@@ -10,15 +10,25 @@ Automatically organize your Downloads folder by file type, size, and date. Lives
 
 ## Quick Start
 
+### For Users (Standalone App)
+
+1. Download `AutoShelf-Installer.dmg`
+2. Open the DMG file
+3. Drag **AutoShelf.app** to your **Applications** folder
+4. Launch AutoShelf from Applications or Spotlight
+5. Follow the welcome tutorial
+
+### For Developers (From Source)
+
 ```bash
-# Install
+# Install dependencies
 pip install -r requirements.txt
 
-# Run
+# Run from source
 python main.py
 ```
 
-Follow the welcome tutorial, or:
+Then:
 1. Click **Settings** → Choose organization methods
 2. Click **Auto-Organize New Files** → Start watching
 3. Done! New files are organized automatically
@@ -73,6 +83,21 @@ video.mp4 (100MB) → videos/large/
 # All three
 photo.jpg (500KB, Oct 2025) → images/small/10-2025/
 ```
+
+## Building Standalone App
+
+Want to build the .app yourself?
+
+```bash
+# Build app bundle and DMG
+./build_app.sh
+
+# Output:
+# - dist/AutoShelf.app (standalone app)
+# - AutoShelf-Installer.dmg (installer)
+```
+
+See [BUILD.md](BUILD.md) for detailed build instructions.
 
 ## Contributing
 

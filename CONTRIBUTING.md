@@ -179,8 +179,7 @@ def categorize_by_type(self, file_path):
 ```
 
 ## Questions?
-
-- Open an [issue](https://github.com/amirmghanem/autoshelf/issues) for questions
+- Open an [issue](https://github.com/AmirMGhanem/autoshelf/issues) for questions
 - Tag with `question` label
 - Check existing issues first
 
