@@ -12,11 +12,17 @@ Automatically organize your Downloads folder by file type, size, and date. Lives
 
 ### For Users (Standalone App)
 
-1. Download `AutoShelf-Installer.dmg`
+1. **[Download AutoShelf-Installer.dmg](https://github.com/AmirMGhanem/autoshelf/releases/download/v0.1/AutoShelf-Installer.dmg)**
 2. Open the DMG file
 3. Drag **AutoShelf.app** to your **Applications** folder
 4. Launch AutoShelf from Applications or Spotlight
 5. Follow the welcome tutorial
+
+**Run on Startup (Optional):**
+1. Open **System Settings** (or **System Preferences** on older macOS)
+2. Go to **General** → **Login Items** (or **Users & Groups** → **Login Items**)
+3. Click the **+** button and select **AutoShelf.app** from Applications
+4. AutoShelf will now start automatically when you log in
 
 ### For Developers (From Source)
 
