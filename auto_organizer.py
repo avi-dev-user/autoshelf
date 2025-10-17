@@ -11,11 +11,10 @@ from watchdog.observers import Observer
 from watchdog.events import FileSystemEventHandler
 from config import get_config
 
-try:
-    import pync
-    HAS_PYNC = True
-except ImportError:
-    HAS_PYNC = False
+# Cross-platform notifications handled by platform_utils
+
+# Cross-platform notifications handled by platform_utils
+from platform_utils import send_notification
 
 
 def log(message):
@@ -81,19 +80,15 @@ class FileOrganizer(FileSystemEventHandler):
             log(f"   Moved to: {dest_path}/")
             log(f"   Done")
             
-            # Notify
-            if HAS_PYNC:
-                try:
-                    pync.notify(
-                        f"Moved to: {dest_path}/",
-                        title=f"{file_path.name}",
-                        appIcon=str(Path(__file__).parent / "logo.png"),
-                        sound="Glass"
-                    )
-                except:
-                    pass
+            # Cross-platform notifications
+            send_notification(
+                title=file_path.name,
+                message=f"Moved to: {dest_path}/"
+            )
         except Exception as e:
             log(f"   Error: {e}")
+    
+
     
     def _get_type_folder(self, file_path):
         """Get folder name based on file type"""

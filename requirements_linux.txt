@@ -1,0 +1,7 @@
+# Linux-only requirements for AutoShelf
+watchdog==6.0.0
+python-dateutil==2.9.0.post0
+six==1.17.0
+
+# Note: tkinter is usually pre-installed on Linux
+# If not available, install with: sudo apt install python3-tk

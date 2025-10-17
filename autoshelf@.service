@@ -1,0 +1,27 @@
+[Unit]
+Description=AutoShelf - Smart File Organizer
+Documentation=https://github.com/AmirMGhanem/autoshelf
+After=graphical-session.target
+
+[Service]
+Type=forking
+WorkingDirectory=%h/projects/autoshelf
+ExecStart=/usr/bin/python3 %h/projects/autoshelf/daemon.py start --pidfile=%h/.autoshelf/autoshelf.pid
+ExecStop=/usr/bin/python3 %h/projects/autoshelf/daemon.py stop --pidfile=%h/.autoshelf/autoshelf.pid
+PIDFile=%h/.autoshelf/autoshelf.pid
+
+# Restart policy
+Restart=always
+RestartSec=10
+
+# Environment
+Environment=DISPLAY=:0
+Environment=PYTHONPATH=%h/projects/autoshelf
+
+# Logging
+StandardOutput=journal
+StandardError=journal
+SyslogIdentifier=autoshelf
+
+[Install]
+WantedBy=default.target

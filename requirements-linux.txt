@@ -1,0 +1,11 @@
+# AutoShelf Linux Requirements
+# Cross-platform dependencies (work on both macOS and Linux)
+python-dateutil==2.9.0.post0
+six==1.17.0
+watchdog==6.0.0
+
+# macOS specific (optional - will be ignored on Linux)
+# pync==2.0.3
+# pyobjc-core==11.1
+# pyobjc-framework-Cocoa==11.1
+# rumps==0.4.0

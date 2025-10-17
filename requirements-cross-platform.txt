@@ -1,0 +1,16 @@
+# AutoShelf - Cross-platform requirements
+# Core dependencies (all platforms)
+watchdog==6.0.0
+python-dateutil==2.9.0.post0
+
+# macOS specific (comment out for Linux-only installation)
+pync==2.0.3; sys_platform == "darwin"
+pyobjc-core==11.1; sys_platform == "darwin"
+pyobjc-framework-Cocoa==11.1; sys_platform == "darwin"
+rumps==0.4.0; sys_platform == "darwin"
+
+# Linux specific - tkinter is usually built-in
+# For Linux systems, you may also need to install: sudo apt install python3-tk
+
+# Common utilities
+six==1.17.0
